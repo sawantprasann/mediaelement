@@ -463,9 +463,11 @@
 				.width(normalWidth)
 				.height(normalHeight);
 
-			t.fullscreenBtn
-				.removeClass('mejs-unfullscreen')
-				.addClass('mejs-fullscreen');
+			if (t.fullscreenBtn) {
+				t.fullscreenBtn
+					.removeClass('mejs-unfullscreen')
+					.addClass('mejs-fullscreen');
+			}
 
 			t.setControlsSize();
 			t.isFullScreen = false;
